@@ -1,0 +1,41 @@
+{
+  "name": "closest-to",
+  "version": "0.0.0",
+  "description": "A function that, when given a target number and an array of numbers, will return the array value closest to the target.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~2.0.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": {
+      "ie": [8, 9, 10],
+      "chrome": [25],
+      "firefox": [19],
+      "safari": [5.1, 6],
+      "opera": [12],
+      "iphone": [6],
+      "android": [4.2]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:michaelrhodes/closest-to.git"
+  },
+  "keywords": [
+    "closest",
+    "number"
+  ],
+  "author": "Michael Rhodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelrhodes/closest-to/issues"
+  }
+}
