@@ -1,6 +1,6 @@
 {
   "name": "closest-to",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A function that, when given a target number and an array of numbers, will return the array value closest to the target.",
   "main": "index.js",
   "directories": {
