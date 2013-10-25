@@ -31,6 +31,10 @@ var closest = require('closest-to')
 closest(10, [3, 7, 1, 9, 5])
 // => 9
 
+closest(-1.25, [2, 0, -1.5, -0.75])
+// => -1.5
+
+
 closest(5, [4, 6])
 // => 4
 ```

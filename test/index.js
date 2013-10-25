@@ -8,6 +8,12 @@ run('it works', function(test) {
   test.end()
 })
 
+run('it works with negatives and floats', function(test) {
+  var winner = closest(-1.25, [2, 0, -1.5, -0.75])
+  test.equal(winner, -1.5)
+  test.end()
+})
+
 run('it returns the first closest number', function(test) {
   var winner = closest(40, [30, 50])
   test.equal(winner, 30)
