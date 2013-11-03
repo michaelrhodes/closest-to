@@ -10,20 +10,6 @@ closest-to is a function that, when given a target number and an array of number
 npm install closest-to
 ```
 
-## API
-``` 
-closest-to(
-
-  target (number):
-    any number
-
-  numbers (array[number]):
-    the collection of numbers you 
-    want to have searched 
-
-)
-```
-
 ### Example
 ``` js
 var closest = require('closest-to')
@@ -36,6 +22,20 @@ closest(-1.25, [2, 0, -1.5, -0.75])
 
 closest(5, [4, 6])
 // => 4
+```
+
+## API
+``` 
+closest-to(
+
+  target (number):
+    any number
+
+  numbers (array[number]):
+    the collection of numbers you 
+    want to have searched 
+
+)
 ```
 
 #### Note
