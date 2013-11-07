@@ -16,11 +16,11 @@
   "testling": {
     "files": "test/*.js",
     "browsers": {
-      "ie": [8, 9, 10],
-      "chrome": [25],
-      "firefox": [19],
-      "safari": [5.1, 6],
-      "opera": [12],
+      "ie": [6, 7, 8, 9, 10],
+      "chrome": [20, 25, 29],
+      "firefox": [4, 19, 24],
+      "safari": [4, 5.1, 6],
+      "opera": [10, 12, 15],
       "iphone": [6],
       "android": [4.2]
     }
