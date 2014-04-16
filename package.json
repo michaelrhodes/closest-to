@@ -1,12 +1,15 @@
 {
   "name": "closest-to",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A function that, when given a target number and an array of numbers, will return the array value closest to the target.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "isarray": "0.0.1",
+    "array-reduce": "0.0.0"
+  },
   "devDependencies": {
     "tape": "~2.0.0"
   },

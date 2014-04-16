@@ -22,16 +22,20 @@ closest(-1.25, [2, 0, -1.5, -0.75])
 
 closest(5, [4, 6])
 // => 4
+
+// Works on multidimensional arrays as well
+closest([1, 2], [[3, 4], [1, 1], [2, 3]])
+// => [1, 1] 
 ```
 
 ## API
 ``` 
 closest-to(
 
-  target (number):
+  target (number || array[number, …]) :
     any number
 
-  numbers (array[number]):
+  numbers (array[number || array[number, …]) :
     the collection of numbers you 
     want to have searched 
 

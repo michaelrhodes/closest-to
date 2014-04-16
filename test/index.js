@@ -19,3 +19,9 @@ run('it returns the first closest number', function(test) {
   test.equal(winner, 30)
   test.end()
 })
+
+run ('it works with multidimensional arrays', function(test) {
+  var winner = closest([1, 2], [[3, 4], [1, 1], [2, 3]])
+  test.deepEqual(winner, [1, 1])
+  test.end()
+})
