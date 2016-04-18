@@ -1,11 +1,8 @@
-var isarray = require('isarray')
-var reduce = require('array-reduce')
-
 var total = function(target) {
-  if (!isarray(target)) {
+  if (!Array.isArray(target)) {
     return target
   }
-  return reduce(target, function(a, b) {
+  return target.reduce(function(a, b) {
     return a + b
   })
 }

@@ -6,10 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {
-    "isarray": "0.0.1",
-    "array-reduce": "0.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "~2.0.0"
   },
