@@ -5,6 +5,8 @@ closest-to is a function that, when given a target number and an array of number
 
 [![Browser support](https://ci.testling.com/michaelrhodes/closest-to.png)](https://ci.testling.com/michaelrhodes/closest-to)
 
+<small>As of 1.0.0, old browsers will require a polyfill for [Array.prototype.reduce](http://kangax.github.io/es5-compat-table/#Array.prototype.reduce) and [Array.isArray](http://kangax.github.io/es5-compat-table/#Array.isArray).</small>
+
 ## Install
 ```
 npm install closest-to
