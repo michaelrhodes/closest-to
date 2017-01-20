@@ -5,9 +5,9 @@ function closest (target, numbers) {
   var difference = 0
   var winner = null
 
-  numbers.sort(function (a, b) {
+  numbers = unique(numbers.sort(function (a, b) {
     return total(a) - total(b)
-  })
+  }))
 
   for (var i = 0, l = numbers.length; i < l; i++) {  
     difference = abs(total(target) - total(numbers[i]))
@@ -17,6 +17,12 @@ function closest (target, numbers) {
   }
 
   return winner
+}
+
+function unique (target) {
+  return target.filter(function (v, i, arr) {
+    return arr.lastIndexOf(v) === i
+  })
 }
 
 function total (target) {

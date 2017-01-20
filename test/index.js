@@ -20,8 +20,14 @@ run('it returns the first closest number', function(test) {
   test.end()
 })
 
-run ('it works with multidimensional arrays', function(test) {
+run('it works with multidimensional arrays', function(test) {
   var winner = closest([1, 2], [[3, 4], [1, 1], [2, 3]])
   test.deepEqual(winner, [1, 1])
+  test.end()
+})
+
+run('it handles arrays with duplicate values', function(test) {
+  var winner = closest(9, [0, 1, 4, 7, 7, 7, 10])
+  test.equal(winner, 10)
   test.end()
 })
