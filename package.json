@@ -1,7 +1,7 @@
 {
   "name": "closest-to",
   "version": "2.0.0",
-  "description": "A function that, when given a target number and an array of numbers, will return the array value closest to the target.",
+  "description": "find the closest value to a given target in a sorted array of numbers",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
