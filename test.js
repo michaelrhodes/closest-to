@@ -30,9 +30,9 @@ test('it works with multidimensional arrays', function (assert) {
   assert.end()
 })
 
-test('it handles arrays with duplicate values', function (test) {
+test('it handles arrays with duplicate values', function (assert) {
   var array = [0, 1, 4, 7, 7, 7, 10]
-  test.equal(closest(9, array), 10)
-  test.equal(closest(9, array, true), 6)
-  test.end()
+  assert.equal(closest(9, array), 10)
+  assert.equal(closest(9, array, true), 6)
+  assert.end()
 })
