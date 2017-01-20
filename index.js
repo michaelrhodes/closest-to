@@ -1,37 +1,18 @@
 var abs = Math.abs
 
-function closest (target, numbers) {
-  var closest = Infinity
-  var difference = 0
-  var winner = null
-
-  numbers = unique(numbers.sort(function (a, b) {
-    return total(a) - total(b)
-  }))
-
-  for (var i = 0, l = numbers.length; i < l; i++) {  
-    difference = abs(total(target) - total(numbers[i]))
-    if (difference >= closest) break
-    closest = difference
-    winner = numbers[i]
-  }
-
-  return winner
-}
-
-function unique (target) {
-  return target.filter(function (v, i, arr) {
-    return arr.lastIndexOf(v) === i
-  })
-}
-
-function total (target) {
-  if (!Array.isArray(target)) {
-    return target
-  }
-  return target.reduce(function(a, b) {
-    return a + b
-  }, 0)
-}
-
 module.exports = closest
+
+function closest (n, arr, rndx) {
+  var i, ndx, diff, best = Infinity
+  var low = 0, high = arr.length - 1
+  while (low <= high) {
+    i = low + (high - low >> 1)
+    diff = arr[i] - n
+    diff < 0 ? low = i + 1 :
+    diff > 0 ? high = i - 1 : void 0
+    diff = abs(diff)
+    if (diff < best) best = diff, ndx = i
+    if (arr[i] === n) break
+  }
+  return rndx ? ndx : arr[ndx]
+}

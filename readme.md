@@ -1,51 +1,33 @@
 # closest-to
-closest-to is a function that, when given a target number and an array of numbers, will return the array value closest to the target.
+closest-to finds the closest value to a given target in a sorted array of numbers
 
-[![Build status](https://travis-ci.org/michaelrhodes/closest-to.png?branch=master)](https://travis-ci.org/michaelrhodes/closest-to)
+[![Build status](https://travis-ci.org/michaelrhodes/closest-to.svg?branch=master)](https://travis-ci.org/michaelrhodes/closest-to)
 
 [![Browser support](https://ci.testling.com/michaelrhodes/closest-to.png)](https://ci.testling.com/michaelrhodes/closest-to)
 
-<small>As of 1.0.0, old browsers will require a polyfill for [Array.prototype.reduce](http://kangax.github.io/es5-compat-table/#Array.prototype.reduce) and [Array.isArray](http://kangax.github.io/es5-compat-table/#Array.isArray).</small>
-
 ## Install
-```
+```sh
 npm install closest-to
 ```
 
-### Example
-``` js
-var closest = require('closest-to')
-
-closest(10, [3, 7, 1, 9, 5])
-// => 9
-
-closest(-1.25, [2, 0, -1.5, -0.75])
-// => -1.5
-
-closest(5, [4, 6])
-// => 4
-
-// Works on multidimensional arrays as well
-closest([1, 2], [[3, 4], [1, 1], [2, 3]])
-// => [1, 1] 
+### Usage
+```js
+require('closest-to')(needle, haystack, [returnIndex])
+require('closest-to/nd')(needle, haystack, [returnIndex])
 ```
-
-## API
-``` 
-closest-to(
-
-  target (number || array[number, …]) :
-    any number
-
-  numbers (array[number || array[number, …]) :
-    the collection of numbers you 
-    want to have searched 
-
-)
+```js
+closest(10, [1, 3, 5, 7, 9])
+> 9
+closest(10, [1, 3, 5, 7, 9], true)
+> 4
 ```
+```js
+ndclosest([1, 2], [[1, 1], [2, 3], [3, 4]])
+> [1, 1]
 
-#### Note
-As you may have noticed in the example, if two numbers are equally close to the target, the first (lowest) number is returned. It would be trivial to instead return an array, but I don’t want to add code if it’s not necessary. If this behaviour is a problem for you, please post an issue.
+ndclosest([1, 2], [[1, 1], [2, 3], [3, 4]], true)
+> 0
+```
 
 ### License
 [MIT](http://opensource.org/licenses/MIT)
