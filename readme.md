@@ -29,5 +29,11 @@ ndclosest([1, 2], [[1, 1], [2, 3], [3, 4]], true)
 > 0
 ```
 
+### Benchmarks
+```
+closest-to@1.0.1 x 116,156 ops/sec ±1.02% (85 runs sampled)
+closest-to@2.0.0 x 860,497 ops/sec ±1.09% (83 runs sampled)
+```
+
 ### License
 [MIT](http://opensource.org/licenses/MIT)
